@@ -16,11 +16,11 @@ public class ConnectionDB {
 	public ConnectionDB() {
 		try{
 			//we obtain the driver for the mysql
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			//we obtain the connection
 			connection = DriverManager.getConnection(url,login,password);
 			if (connection!=null){
-				System.out.println("Connection to the data base: " + bd + " OK\n");
+				
 			}else {
 				System.out.println("Error: Could not connect to database");
 			}
